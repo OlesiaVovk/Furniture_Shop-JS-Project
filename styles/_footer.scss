@@ -1,0 +1,91 @@
+.footer {
+    // width: 100%;
+    min-height: 336px;
+    // background-color: $color-white;
+    background-color: lime;
+    padding: 50px 101px;
+
+
+    display: grid;
+    grid-gap: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+
+    &__funiro {
+        max-width: 249px;
+    }
+
+    &__menu {
+        max-width: 104px;
+    }
+
+    &__account {
+        max-width: 93px;
+    }
+
+    &__connect {
+        max-width: 180px;
+    }
+
+    &__subscribe {
+        max-width: 292px;
+    }
+
+    &__column {
+
+        display: grid;
+        align-content: start;
+        grid-row-gap: 16px;
+
+        // max-width: 200px;
+    
+        &_title {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            color: $color-black;
+        }
+
+        &_item {
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-text2;
+        }
+
+        &_description{
+            max-width: 249px;
+            margin-top: 0;
+        }
+
+        &_subscribe__input {
+            width: 70%;
+        }
+
+        &_subscribe__input:focus {
+            border-color: $color-primary;
+            outline: none;
+            font-family: Gilroy;
+            font-style: normal;
+            color: $color-text2;
+        }
+
+        &_subscribe__button {
+            background-color: $color-primary;
+            border: none;
+        }
+
+        &_subscribe__button:hover {
+            cursor: pointer;
+            background-color: $color-red-accents;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+}
