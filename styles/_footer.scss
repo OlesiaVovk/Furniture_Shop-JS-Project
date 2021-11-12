@@ -86,6 +86,15 @@
 
         &_subscribe__input {
             width: 70%;
+            height: 45px;
+            background-color: $color-product-background;
+            border: none;
+            padding: 3px 0 3px 10px;
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
         }
 
         &_subscribe__input:focus {
@@ -99,6 +108,8 @@
         &_subscribe__button {
             background-color: $color-primary;
             border: none;
+            width: 45px;
+            height: 45px;
         }
 
         &_subscribe__button:hover {
