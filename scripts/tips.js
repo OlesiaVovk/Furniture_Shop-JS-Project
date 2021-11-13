@@ -2,24 +2,26 @@ document.addEventListener( 'DOMContentLoaded', function () {
     new Splide('.splide', {
       type: 'loop',
       width: '90%',
-      gap: -80,
+      gap: 25,
+      arrows: 'slider',
+      //rewind : true,
+      //cover:true,
       //heightRatio : 0.3,
       perPage: 3,
       focus: 'center',
-      //slideFocus: true,
+      slideFocus: true,
       flickMaxPages: 3,
       updateOnMove: true,
       pagination: true,
-      trimSpace: 'move',
-      //padding: { left: 100, right: 20 },
-      padding: '100%',
+      padding: 0,
       throttle: 300,
       breakpoints: {
-        1440: {
+        700: {
           perPage: 1,
-          padding: '30%'
+          padding: 0,
         }
       }
     }).mount();
   });
+  
   
