@@ -1,5 +1,195 @@
 @import "style_variables";
 
+// .container{
+//     background-color: aqua;
+// }
+
+@media screen and (max-width: $breakpoint-phone) {
+    .tooltip {
+        position: absolute;
+        /*ширина всплывающего описания */
+        width: 100%;
+        /*длина всплывающего описания */
+        height: 100%;
+        /*размер шрифта */
+        font-size: 1.5vw;
+        /*сдвиг всплывающего окна в середину изображения*/
+        top: 0%;
+        /*сдвиг всплывающего окна по левой стороне изображения*/
+        left: 0;
+        /*установка прозразности*/
+        filter: alpha(opacity=0);
+        opacity: 0;
+        /*выравнивание текста */
+        text-align: left;
+        /*цвет текста */
+        color: whitesmoke;
+        /*фон блока с текстом */
+        background: black;
+        /*св-во позволяют элементам изменять значения в течение опр-ого периода времени, 
+            анимируя изменения свойств, а не заставляя их происходить немедленно*/
+        transition: all ease 0.5s;
+    }
+
+    .img_bgr_product{
+        background: url('../assets/images/our_products/Bgr_Product.png');
+        margin-top: -16px;
+    }
+}
+
+@media screen and (min-width: #{$breakpoint-phone+1px}) and (max-width: $breakpoint-tablet) {
+    .tooltip {
+        position: absolute;
+        width: 100%;
+        height: 97%;
+        font-size: 1.5vw;
+        top: 0%;
+        left: 0;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        text-align: left;
+        color: whitesmoke;
+        background: black; 
+        transition: all ease 0.5s;
+    }
+
+    .img_bgr_product{
+        background: url('../assets/images/our_products/Bgr_Product.png');
+        margin-top: -16px;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: #{$breakpoint-tablet+1px}) and (max-width: $breakpoint-small) {
+    .tooltip {
+        position: absolute;
+        width: 100%;
+        height: 97%;
+        font-size: 1.5vw;
+        top: 0%;
+        left: 0;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        text-align: left;
+        color: whitesmoke;
+        background: black; 
+        transition: all ease 0.5s;
+    }
+
+    .img_bgr_product{
+        background: url('../assets/images/our_products/Bgr_Product.png');
+        margin-top: -16px;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: #{$breakpoint-small+1px}) and (max-width: 938px) {
+    .tooltip {
+        position: absolute;
+        width: 100%;
+        height: 97%;
+        font-size: 1.5vw;
+        top: 0%;
+        left: 0;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        text-align: left;
+        color: whitesmoke;
+        background: black; 
+        transition: all ease 0.5s;
+    }
+
+    .img_bgr_product{
+        background: url('../assets/images/our_products/Bgr_Product.png');
+        // height: 40%;
+        margin-top: -16px;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: 939px) and (max-width: 960px) {
+    .tooltip {
+        position: absolute;
+        width: 100%;
+        height: 98%;
+        font-size: 1.5vw;
+        top: 0%;
+        left: 0;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        text-align: left;
+        color: whitesmoke;
+        background: black; 
+        transition: all ease 0.5s;
+    }
+
+    .img_bgr_product{
+        background: url('../assets/images/our_products/Bgr_Product.png');
+        height: 40%;
+        margin-top: -16px;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: 961px) and (max-width: #{$breakpoint-medium}) {
+    .tooltip {
+        position: absolute;
+        width: 100%;
+        height: 98%;
+        font-size: 1.5vw;
+        top: 0%;
+        left: 0;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        text-align: left;
+        color: whitesmoke;
+        background: black; 
+        transition: all ease 0.5s;
+    }
+
+    .img_bgr_product{
+        background: url('../assets/images/our_products/Bgr_Product.png');
+        height: 40%;
+        margin-top: -16px;
+        margin-bottom: 5%;
+    }
+
+    .price{
+        margin: 8px 16px 0 16px;
+        display: flex;
+        justify-content: space-between;
+        // border: 2px solid blue;
+    }
+}
+
+@media screen and (min-width: #{$breakpoint-medium+1px}) {
+    .tooltip {
+        position: absolute;
+        width: 100%;
+        height: 104%;
+        font-size: 1.5vw;
+        top: 0%;
+        left: 0;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        text-align: left;
+        color: whitesmoke;
+        background: black; 
+        transition: all ease 0.5s;
+    }
+
+    .img_bgr_product{
+        background: url('../assets/images/our_products/Bgr_Product.png');
+        height: 40%;
+        margin-top: -16px;
+        margin-bottom: 5%;
+    }
+}
+
+.btn_like_red{
+    background: url('../assets/images/our_products/Like_Red.png');
+}
+
 .heading_products{
     font-size: 40px;
     font-style: normal;
@@ -15,24 +205,21 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(auto-fit, 2fr);
     grid-gap: 15px;
-    width: 60vw;
+    width: 90vw;
     margin: 0 auto;
 }
 
 .gallery__article {
     font-family: 'Gilroy', Arial, Helvetica, sans-serif;
-    // display: grid;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // margin-top: 5vh;
     // border: 2px solid blue;
 }
 
 .gallery__img {
     width: 100%;
-    // height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -42,43 +229,11 @@
     margin: 10px auto;
 }
 
-.tooltip {
-    position: absolute;
-    /*ширина всплывающего описания */
-    width: 100%;
-    /*длина всплывающего описания */
-    height: 100%;
-    /*размер шрифта */
-    font-size: 1.5vw;
-    /*сдвиг всплывающего окна в середину изображения*/
-    top: 0%;
-    /*сдвиг всплывающего окна по левой стороне изображения*/
-    left: 0;
-    /*установка прозразности*/
-    filter: alpha(opacity=0);
-    opacity: 0;
-    /*выравнивание текста */
-    text-align: left;
-    /*цвет текста */
-    color: whitesmoke;
-    /*фон блока с текстом */
-    background: black;
-    /*св-во позволяют элементам изменять значения в течение опр-ого периода времени, 
-        анимируя изменения свойств, а не заставляя их происходить немедленно*/
-    transition: all ease 0.5s;
-}
-
 .img__tooltip:hover .tooltip {
     /*установка прозразности*/
     filter: alpha(opacity=70);
     /*прозрачность при наведении мыши */
     opacity: .7;
-}
-
-.img_bgr_product{
-    background: url('../assets/images/our_products/Bgr_Product.png');
-    height: 40%;
-    margin-top: -16px;
 }
 
 .product_name{
@@ -104,9 +259,9 @@
 }
 
 .price{
-    margin: 8px 31px 0 16px;
     display: flex;
     justify-content: space-between;
+    // border: 2px solid blue;
 }
 
 .product_price_sale{
@@ -190,7 +345,6 @@
     top: 175px;
     background-color: $color-white;
     border: 1px solid $color-primary;
+    margin-top: 5%;
 }
-
-
 
