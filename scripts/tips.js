@@ -4,9 +4,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
       width: '90%',
       gap: 25,
       arrows: 'slider',
-      //rewind : true,
-      //cover:true,
-      //heightRatio : 0.3,
       perPage: 3,
       focus: 'center',
       slideFocus: true,
@@ -16,9 +13,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
       padding: 0,
       throttle: 300,
       breakpoints: {
-        700: {
+        768: {
           perPage: 1,
           padding: 0,
+          arrows: false,
         }
       }
     }).mount();
