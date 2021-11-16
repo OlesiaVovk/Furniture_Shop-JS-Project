@@ -1,0 +1,130 @@
+@import "../style_variables";
+
+body,
+html {
+    font-family: 'Gotham Pro', Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+
+.header {
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    background-color: $color-inspiration-background;
+
+    &::before {
+        display: block;
+        position: absolute;
+        width: 864px;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        background-color: $color-pale-orange;
+        content: " ";
+        /* z-index: -1; */
+    }
+
+    .header__menu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        z-index: 1;
+
+        .header__logo {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        select {
+            color: $color-titles;
+            background-color: $color-pale-orange;
+            border: none;
+        }
+
+        input {
+            background: url("/assets/images/header/search.png") no-repeat left;
+            background-position-x: 2mm;
+            padding: 5px 40px;
+            color: $color-text2;
+            border: none;
+        }
+    }
+
+    .jumbotron {
+        position: absolute;
+        width: 494px;
+        height: 553px;
+        left: 100px;
+        top: 141px;
+        background-color: rgba(255, 255, 255, 0.72);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .display-4 {
+            font-weight: 700;
+            font-size: 56px;
+            color: $color-titles;
+        }
+
+        .lead {
+            font-size: 20px;
+            font-weight: 500;
+            color: $color-text3;
+        }
+
+        .header__button {
+            display: flex;
+            justify-content: center;
+            width: 374px;
+            background-color: $color-primary;
+
+
+            .btn {
+                font-size: 20px;
+                color: $color-white;
+            }
+
+        }
+
+    }
+
+}
+
+
+#carouselExampleIndicators {
+    margin-top: 100px;
+
+    .caption {
+        position: absolute;
+        width: 294px;
+        height: 148px;
+        left: 670px;
+        top: 400px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        h4 {
+            color: $color-titles;
+
+            &::after {
+                content: " →";
+            }
+        }
+
+        p {
+            color: $color-text2;
+        }
+    }
+}
