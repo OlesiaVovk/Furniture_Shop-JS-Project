@@ -1,78 +1,114 @@
 @import "style_variables";
 @import "style_breakpoints";
 
-
 .inspiration {
     display: flex;
     background-color: $color-inspiration-background;
-    margin: 0 auto;
-    padding: 20px;
-    min-height: 100%;
+    flex-direction: row;
+    margin-top: 20px;
 }
 
-.inspiration_container {
-    display: grid;
-    grid-template-columns: 20% 40% 40%;
-    grid-template-rows: auto;
+
+.inspiration__container {
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
 }
 
-.inspiration_container_text {
+.inspiration__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
+    margin: 3%;
 }
 
-.inspiration_container_title {
+
+.inspiration__title {
     color: $color-titles;
 }
 
-.inspiration_container_subtitle {
+.inspiration__subtitle {
     color: $color-text2;
 }
 
-.inspiration_container_btn {
-    width: 65%;
-    height: 10%;
+.inspiration__button {
     color: $color-white;
     background-color: $color-primary;
     border: $color-primary;
+    width: 55%;
 }
 
-
-.inspiration_container_foto {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-}
-
-.inspiration_container_room {
-    grid-column: 1/2;
-}
-
-.inspiration_container_room_foto {
-    border: 2px solid rgba(255, 255, 255, 0.72);
-    background-color: rgba(233, 227, 227, 0.425);
-    position: absolute;
-    left: 397px;
-    top: 1442px;
-}
-
-.inspiration_container_room_btn {
-    background-color: $color-primary;
-    border: none;
-    position: absolute;
-    height: 48px;
-    width: 48px;
-    left: 518px;
-    top: 1477px;
-
-}
-
-.inspiration_container_rooms {
+.inspiration__photo {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.foto_room {
+.inspiration__room-text {
+    text-align: center;
+    position: relative;
+    left: 39px;
+    bottom: 142px;
+
+}
+
+.inspiration__room__text {
+    width: 153x;
+    height: 96px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.562);
+}
+
+.inspiration__room__desc {
+    color: $color-titles;
+    padding: 5px;
+}
+
+.inspiration__room__quote {
+    color: $color-text2;
+    padding: 5px;
+}
+
+.inspiration__room__btn {
+    position: relative;
+    left: 76px;
+    bottom: 34px;
+    background-color: coral;
+}
+
+.inspiration__gall {
+    display: flex;
+    margin-left: 3%;
+    /* border: 2px solid green; */
+}
+
+.inspiration__btn {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#btnNext,
+#btnPrev {
+    margin: 4%;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+}
+
+#btnNext:hover {
+    color: #053308;
+    box-shadow: inset 0 0 0 1px #044118;
+}
+
+#btnPrev:hover {
+    color: #053308;
+    box-shadow: inset 0 0 0 1px #044118;
+}
+
+.inspiration__photo__room {
     display: none;
     position: fixed;
     z-index: 999;
@@ -84,40 +120,15 @@
     background: rgba(0, 0, 0, 0.8);
 }
 
-.foto_room:target {
+.inspiration__photo__room:target {
     display: block;
 }
 
-.foto_room span {
+.inspiration__photo__room span {
     display: block;
     width: 100%;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-.inspiration_container_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-
-#buttonNext {
-    width: 100%;
-    background: #ffffff;
-    color: #110101;
-    padding: 10px;
-    margin: 15%;
-    font-size: 18px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    transition: all 500ms ease;
-    border: 2px solid rgba(0, 0, 0, 0.8);
-}
-
-#buttonNext:hover {
-    color: #0e0f0f;
-    box-shadow: inset 0 0 0 1px #000608;
 }
