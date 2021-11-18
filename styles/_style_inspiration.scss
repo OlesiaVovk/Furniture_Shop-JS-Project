@@ -1,17 +1,13 @@
 @import "style_variables";
-
-@import "style_variables";
 @import "style_breakpoints";
 
 
 .inspiration {
     display: flex;
-    // position: relative;
     background-color: $color-inspiration-background;
-    margin: 0 auto 50px; // отступ вниз до tips
+    margin: 0 auto;
     padding: 20px;
     min-height: 100%;
-    width: 100%;
 }
 
 .inspiration_container {
@@ -46,8 +42,6 @@
 .inspiration_container_foto {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 100%;
-    margin: 6px;
 }
 
 .inspiration_container_room {
@@ -56,10 +50,8 @@
 
 .inspiration_container_room_foto {
     border: 2px solid rgba(255, 255, 255, 0.72);
-    background-color: rgba(255, 255, 255, 0.425);
+    background-color: rgba(233, 227, 227, 0.425);
     position: absolute;
-    // height: 130px;
-    // width: 217px;
     left: 397px;
     top: 1442px;
 }
@@ -76,22 +68,8 @@
 }
 
 .inspiration_container_rooms {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 5%;
-    grid-template-rows: 1fr;
-    margin: 3%;
-}
-
-
-.room {
-    grid-row: 1/1;
-    grid-column: 1/2;
-}
-
-.bedroom {
-    grid-row: 1/1;
-    grid-column: 2/2;
+    display: flex;
+    justify-content: center;
 }
 
 .foto_room {
@@ -117,4 +95,29 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.inspiration_container_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#buttonNext {
+    width: 100%;
+    background: #ffffff;
+    color: #110101;
+    padding: 10px;
+    margin: 15%;
+    font-size: 18px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+#buttonNext:hover {
+    color: #0e0f0f;
+    box-shadow: inset 0 0 0 1px #000608;
 }
