@@ -4,18 +4,28 @@
 
 .header {
     position: relative;
-    margin: 0 auto 50px;
-    padding: 70px;
-    min-height: 100%;
-    width: 100%;
-    background-color: $color-pale-orange;
+    margin: 0 auto;
+    min-height: 90%;
+    width: 90vw;
+    background-color: $color-inspiration-background;
+
+    &::before {
+        display: block;
+        position: absolute;
+        width: 65vw;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        background-color: $color-pale-orange;
+        content: " ";
+    }
 
     .header__menu {
         position: relative;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-bottom: 20px;
+        padding: 50px 0;
 
         a {
             cursor: pointer;
@@ -95,7 +105,7 @@
     .dropdown {
 
         #dropdownMenuButton {
-            background-color: $color-pale-orange;
+            background-color: $color-inspiration-background;
         }
 
         .dropdown-item {
@@ -143,8 +153,8 @@
         position: absolute;
         width: 494px;
         height: 553px;
-        left: 100px;
-        top: 160px;
+        left: 110px;
+        top: 140px;
         background-color: rgba(255, 255, 255, 0.72);
         display: flex;
         flex-direction: column;
@@ -239,37 +249,97 @@
 }
 
 
-#carouselExampleIndicators {
-    margin-top: 100px;
+.radiobuttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    left: 650px;
 
-    .caption {
-        position: absolute;
-        width: 254px;
-        height: 148px;
-        right: 70px;
-        bottom: 70px;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.5);
+    .switch {
+        position: relative;
+        width: 27px;
+        height: 27px;
+        border-radius: 100%;
+        background-color: $color-pale-orange;
+        border: 1px solid #{$color-pale-orange};
+        margin-right: 20px;
 
-        h3 {
-            font-size: 28px;
+        &::after {
+            content: " ";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            bottom: 8px;
+            left: 8px;
+            border-radius: 100%;
+            background-color: $color-text4;
         }
 
-        h4 {
-            font-size: 20px;
-            color: $color-titles;
+        &.switch-active {
+            border-color: $color-primary;
 
             &::after {
-                content: " →";
+                background-color: $color-primary;
             }
-        }
-
-        p {
-            font-size: 16px;
-            color: $color-text2;
         }
     }
 }
+
+
+.carouselButtons {
+    position: absolute;
+    top: 140px;
+    right: 100px;
+    display: flex;
+
+    .buttonPrev {
+        margin-right: 10px;
+    }
+}
+
+#carouselExampleIndicators {
+    margin: 0 auto;
+
+    .carousel-item {
+        margin: 0 100px 0 50px;
+        padding: 50px 150px 0;
+    }
+
+    .carousel-inner {
+        position: relative;
+
+        .caption {
+            position: absolute;
+            width: 254px;
+            height: 148px;
+            right: 190px;
+            bottom: 40px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+
+            h3 {
+                font-size: 28px;
+            }
+
+            h4 {
+                font-size: 20px;
+                color: $color-titles;
+
+                &::after {
+                    content: " →";
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: $color-text2;
+            }
+        }
+    }
+}
+
 
 .header__benefits {
     display: flex;
