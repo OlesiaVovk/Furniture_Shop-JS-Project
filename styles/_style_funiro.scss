@@ -1,6 +1,7 @@
 @import "style_variables";
+@import "style_breakpoints";
 
-#img_funiro {
+.img_funiro {
     max-width: 100%;
     min-height: 100%;
     object-fit: cover;
@@ -84,10 +85,10 @@
 }
 
 #text_container_funiro1 {
-    width: 14vw;
+    width: 30vw;
     height: 4vh;
     position: absolute;
-    left: 41vw;
+    left: 34vw;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -118,4 +119,76 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+//320-360
+@media screen and (max-width: $breakpoint-phone) {
+    .container_funiro{
+        display: none;
+    }
+}
+
+@media screen and (min-width: #{$breakpoint-phone+1px}) and (max-width: $breakpoint-tablet) {
+    .container_funiro{
+        display: none;
+    }
+}
+
+@media screen and (min-width: #{$breakpoint-tablet+1px}) and (max-width: $breakpoint-small) {
+    #img_container_funiro5, #img_container_funiro6, #img_container_funiro7, #img_container_funiro8, #img_container_funiro9 {
+        display: none;
+    }
+    #text_container_funiro1 {
+        left: 38vw;
+        width: 50vw;
+        font-size: 20px;
+    }
+    #text_container_funiro2 {
+        top: 3vh;
+        left: 43vw;
+        font-size: 30px;
+    }
+    #img_container_funiro1 {
+        width: 40vw;
+        height: 50vh;
+        position: absolute;
+        top: 7vh;
+    }
+    #img_container_funiro2 {
+        width: 50vw;
+        height: 41vh;
+        position: absolute;
+        top: 59vh;
+    }
+    
+    #img_container_funiro3 {
+        width: 55vw;
+        height: 43vh;
+        position: absolute;
+        top: 14vh;
+        left: 45vw;
+    }
+    
+    #img_container_funiro4 {
+        width: 45vw;
+        height: 34vh;
+        position: absolute;
+        top: 59vh;
+        left: 55vw;
+    }
+}
+@media screen and (min-width: #{$breakpoint-small+1px}) and (max-width: $breakpoint-medium) {
+    #text_container_funiro1 {
+        left: 33vw;
+    }
+    #text_container_funiro2 {
+        left: 32vw;
+    }
+}
+@media screen and (min-width: #{$breakpoint-medium+1px}) and (max-width: $breakpoint-large) {
+    #text_container_funiro1 {
+        left: 32vw;
+    }
+    #text_container_funiro2 {
+        left: 31vw;
+    }
 }
