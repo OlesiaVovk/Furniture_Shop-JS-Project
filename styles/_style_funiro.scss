@@ -111,3 +111,11 @@
     text-align: center;
     color: $color-titles;
 }
+
+.container_funiro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
