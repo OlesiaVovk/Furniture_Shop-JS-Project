@@ -4,24 +4,67 @@
 
 .header {
     position: relative;
-    margin: 0 auto;
-    min-height: 90%;
-    width: 90vw;
+    margin: 0 auto 50px;
+    min-height: 100%;
+    width: 100%;
     background-color: $color-inspiration-background;
 
-    &::before {
-        display: block;
-        position: absolute;
-        width: 65vw;
-        bottom: 0;
-        left: 0;
-        top: 0;
-        background-color: $color-pale-orange;
-        content: " ";
+    .left {
+        display: flex;
+        justify-content: flex-end;
+
+
+        .groupButtons {
+            display: flex;
+            justify-content: space-between;
+            width: 50vw;
+            margin-right: 100px;
+
+            .radiobuttons {
+                display: flex;
+                align-items: center;
+
+                .switch {
+                    position: relative;
+                    width: 27px;
+                    height: 27px;
+                    border-radius: 100%;
+                    background-color: $color-inspiration-background;
+                    border: 1px solid #{$color-inspiration-background};
+                    margin-right: 20px;
+
+                    &::after {
+                        content: " ";
+                        position: absolute;
+                        top: 8px;
+                        right: 8px;
+                        bottom: 8px;
+                        left: 8px;
+                        border-radius: 100%;
+                        background-color: $color-text4;
+                    }
+
+                    &.switch-active {
+                        border-color: $color-primary;
+
+                        &::after {
+                            background-color: $color-primary;
+                        }
+                    }
+                }
+            }
+
+            .carouselButtons {
+                display: flex;
+
+                .buttonPrev {
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 
     .header__menu {
-        position: relative;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -77,6 +120,14 @@
                 justify-content: space-between;
                 align-items: center;
                 width: 90%;
+            }
+
+            .header-small__row-top {
+                margin-bottom: 20px;
+            }
+
+            .header-small__row-bottom {
+                width: 70%;
             }
 
             .header-small__logo {
@@ -248,57 +299,6 @@
     margin-top: 20px;
 }
 
-
-.radiobuttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    top: 150px;
-    left: 650px;
-
-    .switch {
-        position: relative;
-        width: 27px;
-        height: 27px;
-        border-radius: 100%;
-        background-color: $color-pale-orange;
-        border: 1px solid #{$color-pale-orange};
-        margin-right: 20px;
-
-        &::after {
-            content: " ";
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            bottom: 8px;
-            left: 8px;
-            border-radius: 100%;
-            background-color: $color-text4;
-        }
-
-        &.switch-active {
-            border-color: $color-primary;
-
-            &::after {
-                background-color: $color-primary;
-            }
-        }
-    }
-}
-
-
-.carouselButtons {
-    position: absolute;
-    top: 140px;
-    right: 100px;
-    display: flex;
-
-    .buttonPrev {
-        margin-right: 10px;
-    }
-}
-
 #carouselExampleIndicators {
     margin: 0 auto;
 
@@ -462,10 +462,13 @@
 //500-768
 @media screen and (min-width: #{$breakpoint-tablet+1px}) and (max-width: $breakpoint-small) {
     .header {
+        padding-top: 30px;
 
         .pos-f-t,
         .header__menu,
-        .jumbotron {
+        .jumbotron,
+        .radiobuttons,
+        .carouselButtons {
             display: none;
         }
     }
@@ -514,10 +517,13 @@
 //769-1023
 @media screen and (min-width: #{$breakpoint-small+1px}) and (max-width: $breakpoint-medium) {
     .header {
+        padding-top: 30px;
 
         .header__menu,
         .pos-f-t,
-        #header__jumbotron-small {
+        #header__jumbotron-small,
+        .radiobuttons,
+        .carouselButtons {
             display: none;
         }
 
@@ -525,7 +531,7 @@
             width: 300px;
             height: 400px;
             left: 50px;
-            top: 110px;
+            top: 140px;
 
             .display-4 {
                 font-size: 36px;
@@ -542,14 +548,35 @@
     }
 
     #carouselExampleIndicators {
-        margin-top: 50px;
 
-        .caption {
-            right: 20px;
-            bottom: 20px;
+        .carousel-inner {
+            .caption {
+                width: 204px;
+                height: 98px;
+                right: 170px;
+                bottom: 20px;
+                padding: 10px;
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                h4 {
+                    font-size: 20px;
+                    color: $color-titles;
+
+                    &::after {
+                        content: " →";
+                    }
+                }
+
+                p {
+                    font-size: 13px;
+                    color: $color-text2;
+                }
+            }
         }
     }
-
 }
 
 
