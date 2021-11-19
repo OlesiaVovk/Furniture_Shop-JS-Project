@@ -16,8 +16,8 @@
     <header class="header">
         <nav class="header__menu">
             <div class="header__logo">Funiro.</div>
-            <div class="header__menu-item"><a href="#products">Products&nbsp;<img src="assets/images/header/arrowDown.png"
-                        alt="img" /></a></div>
+            <div class="header__menu-item"><a href="#products">Products&nbsp;<img
+                        src="assets/images/header/arrowDown.png" alt="img" /></a></div>
             <div class="header__menu-item"><a href="#funiro">Rooms&nbsp;<img src="assets/images/header/arrowDown.png"
                         alt="img" /></a>
             </div>
@@ -48,12 +48,35 @@
                 </div>
             </div>
         </nav>
-
+        <div class="left">
+        <div class="groupButtons">
+            <div class="radiobuttons">
+                <a class="switch" href="#" role="button"></a>
+                <a class="switch switch-active" href="#" role="button"></a>
+                <a class="switch" href="#" role="button"></a>
+                <a class="switch" href="#" role="button"></a>
+            </div>
+            <div class="carouselButtons">
+                <div class="buttonPrev"><img src="assets/images/header/btnPrev.png" /></div>
+                <div class="buttonNext"><img src="assets/images/header/btnNext.png" /></div>
+            </div>
+        </div>
+    </div>
         <div class="header-small">
             <nav class="header-small__menu">
                 <div class="header-small__row-top">
+                    <div class="header-small__logo">Funiro.</div>
+                    <div class="header__menu-item"><a href="#products">Products <img
+                                src="assets/images/header/arrowDown.png" alt="img" /></a></div>
+                    <div class="header__menu-item"><a href="#funiro">Rooms <img src="assets/images/header/arrowDown.png"
+                                alt="img" /></a>
+                    </div>
+                    <div class="header__menu-item"><a href="#inspirations">Inspirations <img
+                                src="assets/images/header/arrowDown.png" alt="img" /></a></div>
+                </div>
+                <div class="header-small__row-bottom">
                     <div>
-                        <input type="search" placeholder="Search for..." size="20" />
+                        <input type="search" placeholder="Search for minimalist chair" size="20" />
                     </div>
                     <div class="favorites">
                         <img src="assets/images/header/favorites.png" alt="heart" />
@@ -64,16 +87,6 @@
                     <div class="user">
                         <img src="assets/images/header/user.png" alt="user" class="user" />
                     </div>
-                </div>
-                <div class="header-small__row-bottom">
-                    <div class="header-small__logo">Funiro.</div>
-                    <div class="header__menu-item"><a href="#products">Products <img
-                                src="assets/images/header/arrowDown.png" alt="img" /></a></div>
-                    <div class="header__menu-item"><a href="#funiro">Rooms <img src="assets/images/header/arrowDown.png"
-                                alt="img" /></a>
-                    </div>
-                    <div class="header__menu-item"><a href="#inspirations">Inspirations <img
-                                src="assets/images/header/arrowDown.png" alt="img" /></a></div>
                 </div>
             </nav>
         </div>
@@ -156,16 +169,6 @@
             </div>
         </div>
 
-        <div class="radiobuttons">
-            <a class="switch switch-active" href="#" role="button"></a>
-            <a class="switch" href="#" role="button"></a>
-            <a class="switch" href="#" role="button"></a>
-            <a class="switch" href="#" role="button"></a>
-          </div>
-          <div class="carouselButtons">
-          <div class="buttonPrev"><img src="assets/images/header/btnPrev.png"/></div>
-          <div class="buttonNext"><img src="assets/images/header/btnNext.png"/></div>
-        </div>
         <div id="header__jumbotron-small">
             <div class="jumbotron-small">
                 <h1 class="display-4">High-Quality Furniture Just For You</h1>
@@ -468,6 +471,21 @@
             </div>
         </section>
     </main>
+
+    <div id="total_container_funiro">
+        <!--Блоки с абсолютным позиционированием -->
+        <div id="img_container_funiro1"><img id="img_funiro" src="assets/images/funiro/Rectangle36.png"> </div>
+        <div id="img_container_funiro2"> <img id="img_funiro" src="assets/images/funiro/Rectangle37.png"></div>
+        <div id="img_container_funiro3"> <img id="img_funiro" src="assets/images/funiro/Rectangle38.png"></div>
+        <div id="img_container_funiro4"><img id="img_funiro" src="assets/images/funiro/Rectangle39.png"></div>
+        <div id="text_container_funiro1"> Share you set up with </div>
+        <div id="text_container_funiro2"> #FuniroFurniture </div>
+        <div id="img_container_funiro5"><img id="img_funiro" src="assets/images/funiro/Rectangle40.png"></div>
+        <div id="img_container_funiro6"><img id="img_funiro" src="assets/images/funiro/Rectangle43.png"></div>
+        <div id="img_container_funiro7"><img id="img_funiro" src="assets/images/funiro/Rectangle41.png"></div>
+        <div id="img_container_funiro8"> <img id="img_funiro" src="assets/images/funiro/Rectangle45.png"></div>
+        <div id="img_container_funiro9"> <img id="img_funiro" src="assets/images/funiro/Rectangle44.png"></div>
+    </div>
     <section class="footer">
         <div class="footer__column footer__funiro">
             <h3 class="footer__column_title">Funiro.</h3>
@@ -511,17 +529,18 @@
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
-    <script src="scripts/index.js"></script>
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/our_products.js"></script>
     <script src="scripts/inspiration.js"></script>
     <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="scripts/tips.js"></script>
 </body>
-
 </html>
