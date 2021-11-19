@@ -395,12 +395,14 @@
                     <h2 class="inspiration__title"> 50+ Beautiful rooms <br> inspiration </h2>
                     <p class="inspiration__subtitle"> Our designer already made a lot of beautiful <br>
                         prototipe of rooms that inspire you</p>
-                    <input type="button" class="inspiration__button" value="Explore More"> </input>
+                    <button class="inspiration__button"> Explore More</button>
                 </div>
                 <div class="inspiration__photo">
                     <div class="inspiration__room inspiration__room-photo">
                         <a href="#img3" class="room">
-                            <img src="./assets/images/inspiration/Rectangle24.png" alt="children’s">
+                            <div class="inspiration__gall-photo">
+                                <img src="./assets/images/inspiration/Rectangle24.png" alt="children’s" class="room">
+                            </div>
                         </a>
                         <a href="#" class="inspiration__photo__room" id="img3">
                             <span style="background-image: url(./assets/images/inspiration/Rectangle24.png)"></span>
@@ -419,7 +421,9 @@
                         <button type="button" onclick="changeImgPrev()" id="btnPrev">&lsaquo;</button>
                     </div>
                     <a href="#img1">
-                        <img src="./assets/images/inspiration/Rectangle25.png" alt="room" class="room" id="room">
+                        <div class="inspiration__gall-photo">
+                            <img src="./assets/images/inspiration/Rectangle25.png" alt="room" class="room" id="room">
+                        </div>
                     </a>
                     <a href="#" class="inspiration__photo__room" id="img1">
                         <span style="background-image: url(./assets/images/inspiration/Rectangle25.png);"></span>
@@ -430,6 +434,7 @@
                 </div>
             </div>
         </section>
+
 
         <section class="tips">
             <div class="tips__header">Tips & Tricks</div>
