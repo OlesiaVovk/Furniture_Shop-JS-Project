@@ -2,7 +2,7 @@ const btnLike = document.querySelectorAll("input.btn_like");
 let arrayLikes = []; //массив лайков
 
 const btnShare = document.querySelectorAll("input.btn_share");
-console.log(btnShare);
+// console.log(btnShare);
 
 for (let share of btnShare) {
     share.addEventListener('click', function (event) {
