@@ -132,3 +132,159 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+
+//320-360
+@media screen and (max-width: $breakpoint-phone) {
+    .inspiration {
+        display: grid;
+        justify-content: center;
+        background-color: $color-inspiration-background;
+        margin-top: 20px;
+    }
+
+    .inspiration__container {
+        margin: 2%;
+        display: grid;
+        justify-content: center;
+        width: 90vw;
+    }
+
+    .inspiration__text {
+        display: grid;
+        justify-content: center;
+    }
+
+    .inspiration__photo,
+    .inspiration__room-text,
+    .inspiration__room__text,
+    .inspiration__subtitle {
+        display: none;
+    }
+
+    .inspiration__gall-photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .room {
+        width: 55%;
+    }
+
+}
+
+//361-499
+@media screen and (min-width: #{$breakpoint-phone+1px}) and (max-width: $breakpoint-tablet) {
+    .inspiration {
+        display: grid;
+        justify-content: center;
+        background-color: $color-inspiration-background;
+        margin-top: 20px;
+    }
+
+    .inspiration__container {
+        margin: 2%;
+        display: grid;
+        // justify-content: center;
+        width: 90vw;
+    }
+
+    .inspiration__text {
+        display: grid;
+        justify-content: center;
+    }
+
+
+    .inspiration__room-text,
+    .inspiration__room__text {
+        display: none;
+    }
+
+
+    .inspiration__gall-photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .room {
+        padding: 3%;
+        width: 75%;
+    }
+}
+
+//500-768
+@media screen and (min-width: #{$breakpoint-tablet+1px}) and (max-width: $breakpoint-small) {
+
+    .inspiration__container {
+        margin: 2%;
+        display: grid;
+        width: 90vw;
+    }
+
+    .inspiration__text {
+        display: grid;
+        justify-content: center;
+    }
+
+    .inspiration__gall-photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .room {
+        padding: 3%;
+        width: 65%;
+    }
+}
+
+//769-1023
+@media screen and (min-width: #{$breakpoint-small+1px}) and (max-width: $breakpoint-medium) {
+    .inspiration__container {
+        margin: 2%;
+        display: flex;
+        width: 90vw;
+    }
+
+    .inspiration__text {
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .inspiration__gall-photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .room {
+        width: 90%;
+    }
+}
+
+
+//1024-1199
+@media screen and (min-width: #{$breakpoint-medium+1px}) and (max-width: $breakpoint-large) {
+    .inspiration__container {
+        margin: 2%;
+        display: flex;
+        width: 90vw;
+    }
+
+    .inspiration__text {
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .inspiration__gall-photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .room {
+        width: 100%;
+    }
+}
+
+//1199
+@media screen and (min-width: #{$breakpoint-large+1px}) {}
