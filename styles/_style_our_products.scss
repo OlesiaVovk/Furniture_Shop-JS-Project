@@ -69,10 +69,8 @@
 }
 
 .img__tooltip:hover .tooltip {
-    /*установка прозразности*/
-    filter: alpha(opacity=70);
-    /*прозрачность при наведении мыши */
-    opacity: .7;
+    filter: alpha(opacity=70);/*установка прозразности*/
+    opacity: .7;/*прозрачность при наведении мыши */
 }
 
 .product_name {
@@ -171,11 +169,6 @@
 }
 
 .bdt_show_more {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    color: $color-primary;
     height: 48px;
     width: 202px;
     left: 42px;
@@ -186,3 +179,15 @@
     margin-bottom: 5%;
 }
 
+.link_show_more{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-primary;
+}
+
+.link_show_more:hover{
+    color: $color-primary;
+    text-decoration: none;
+}

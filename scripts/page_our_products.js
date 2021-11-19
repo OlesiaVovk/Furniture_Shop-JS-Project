@@ -262,6 +262,9 @@ function createProduct(massProduct){//ф-ия по созданию элемен
         bdt.textContent = "Add to cart";
         divShadow.appendChild(bdt);
 
+        //слушатель для кнопки Add to cart, при её нажатии вызывает ф-ию addToCart
+        bdt.addEventListener("click", addToCart); 
+
         let divOverlay = document.createElement('div');
         divOverlay.className = "overlay_btn_shake_like";
         bdt.after(divOverlay);
@@ -277,7 +280,7 @@ function createProduct(massProduct){//ф-ия по созданию элемен
         input1.value = massProduct[i].name;
         line6.appendChild(input1);
 
-        //слушатель для кнопки Подробнее, при её нажатии вызывает ф-ию bdtDetailedInfo
+        //слушатель для кнопки Share, при её нажатии вызывает ф-ию bdtDetailedInfo
         input1.addEventListener("click", bdtShareProduct); 
 
         let line7 = document.createElement('p');
@@ -308,4 +311,10 @@ function buttonLikeProduct(event){//срабатывает при нажатии
     event.target.closest(".btn_like").classList.toggle("btn_like_red");
     arrayLikes.push(event.target.value);
     localStorage.setItem('like', JSON.stringify(arrayLikes));
+}
+
+function addToCart(event){//срабатывает при нажатии на кнопку Add to card
+    Swal.fire(
+        "Товар добавлен в корзину!"
+    );
 }
