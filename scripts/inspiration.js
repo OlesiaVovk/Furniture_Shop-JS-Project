@@ -9,7 +9,7 @@ let counter = -1; // Счетчик, указывающий на текущую 
 function changeImgNext() { //функция кнопки 
     let img = document.getElementById("room"); // ищем картинку
     if (counter < arrayImg.length - 1) //
-        counter++
+        counter++;
     else {
         counter = 0; //
     }
@@ -20,7 +20,7 @@ function changeImgNext() { //функция кнопки
 function changeImgPrev() { //функция кнопки 
     let img = document.getElementById("room"); // ищем картинку
     if (counter > 0) //
-        counter--
+        counter--;
     else {
         counter = arrayImg.length - 1; //
     }
