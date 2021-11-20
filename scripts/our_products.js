@@ -11,7 +11,7 @@ for (let share of btnShare) {
         console.log(event.target.closest(".btn_share").value);
         window.navigator.clipboard.writeText(event.target.closest(".btn_share").value);
         let productName = `${event.target.closest(".btn_share").value}`;
-        Swal.fire(//данная функция формирует модальное окно с данными
+        Swal.fire( //данная функция формирует модальное окно с данными
             "Скопировано, в буфер!",
             "Название товара " + productName
         );
@@ -49,8 +49,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //срабатывает при нажатии на кнопку Лайк
 for (let like of btnLike) {
     like.addEventListener('click', function (event) {
-        event.target.closest(".btn_like").classList.toggle("btn_like_red");
-        arrayLikes.push(event.target.value);
+        let button = event.target.closest(".btn_like");
+        if (button.classList.contains("btn_like_red")) {
+            button.classList.remove("btn_like_red");
+            arrayLikes.pop(event.target.value);
+        } else {
+            button.classList.add("btn_like_red");
+            arrayLikes.push(event.target.value);
+        }
+        /*         event.target.closest(".btn_like").classList.toggle("btn_like_red");
+                arrayLikes.push(event.target.value); */
         localStorage.setItem('like', JSON.stringify(arrayLikes));
     });
 }
