@@ -78,7 +78,7 @@
   line-height: 29px;
 }
 .header .header__menu input {
-  background: url("/assets/images/header/search.png") no-repeat left;
+  background: url("../assets/images/header/search.png") no-repeat left;
   background-position-x: 2mm;
   padding: 5px 40px;
   color: #616161;
@@ -120,7 +120,7 @@
   font-size: 24px;
 }
 .header .header-small .header-small__menu input {
-  background: url("/assets/images/header/search.png") no-repeat left;
+  background: url("../assets/images/header/search.png") no-repeat left;
   background-position-x: 2mm;
   padding: 5px 40px;
   color: #616161;
@@ -144,27 +144,27 @@
   color: #898989;
 }
 .header .dropdown .userName::after {
-  content: url(/assets/images/header/person.svg);
+  content: url(../assets/images/header/person.svg);
   margin-left: 5px;
 }
 .header .dropdown .userMail {
   color: #898989;
 }
 .header .dropdown .userMail::after {
-  content: url(/assets/images/header/mail.svg);
+  content: url(../assets/images/header/mail.svg);
   margin-left: 5px;
 }
 .header .dropdown .userNotifications {
   color: #898989;
 }
 .header .dropdown .userNotifications::after {
-  content: url(/assets/images/header/bell.svg);
+  content: url(../assets/images/header/bell.svg);
 }
 .header .dropdown .userSettings {
   color: #898989;
 }
 .header .dropdown .userSettings::after {
-  content: url(/assets/images/header/gear.svg);
+  content: url(../assets/images/header/gear.svg);
   margin-left: 5px;
 }
 .header .jumbotron {
@@ -241,7 +241,7 @@
 }
 
 .text-white input {
-  background: url("/assets/images/header/search.png") no-repeat left;
+  background: url("../assets/images/header/search.png") no-repeat left;
   background-position-x: 2mm;
   padding: 0 40px;
   border: none;
