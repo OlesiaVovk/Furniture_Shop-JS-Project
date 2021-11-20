@@ -85,7 +85,7 @@
         }
 
         input {
-            background: url("/assets/images/header/search.png") no-repeat left;
+            background: url("../assets/images/header/search.png") no-repeat left;
             background-position-x: 2mm;
             padding: 5px 40px;
             color: $color-text2;
@@ -136,7 +136,7 @@
             }
 
             input {
-                background: url("/assets/images/header/search.png") no-repeat left;
+                background: url("../assets/images/header/search.png") no-repeat left;
                 background-position-x: 2mm;
                 padding: 5px 40px;
                 color: $color-text2;
@@ -168,7 +168,7 @@
             color: $color-text3;
 
             &::after {
-                content: url(/assets/images/header/person.svg);
+                content: url(../assets/images/header/person.svg);
                 margin-left: 5px;
             }
         }
@@ -177,7 +177,7 @@
             color: $color-text3;
 
             &::after {
-                content: url(/assets/images/header/mail.svg);
+                content: url(../assets/images/header/mail.svg);
                 margin-left: 5px;
             }
         }
@@ -186,7 +186,7 @@
             color: $color-text3;
 
             &::after {
-                content: url(/assets/images/header/bell.svg);
+                content: url(../assets/images/header/bell.svg);
             }
         }
 
@@ -194,7 +194,7 @@
             color: $color-text3;
 
             &::after {
-                content: url(/assets/images/header/gear.svg);
+                content: url(../assets/images/header/gear.svg);
                 margin-left: 5px;
             }
         }
@@ -287,7 +287,7 @@
 
 .text-white {
     input {
-        background: url("/assets/images/header/search.png") no-repeat left;
+        background: url("../assets/images/header/search.png") no-repeat left;
         background-position-x: 2mm;
         padding: 0 40px;
         border: none;
