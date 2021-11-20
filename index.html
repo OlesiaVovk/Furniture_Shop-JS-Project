@@ -18,17 +18,17 @@
             <div class="header__logo"><a href="#main">Funiro.</a></div>
             <div class="header__menu-item"><a href="#products">Products&nbsp;<img
                         src="assets/images/header/arrowDown.png" alt="img" /></a></div>
-            <div class="header__menu-item"><a href="#total_container_funiro">Rooms&nbsp;<img src="assets/images/header/arrowDown.png"
-                        alt="img" /></a>
+            <div class="header__menu-item"><a href="#total_container_funiro">Rooms&nbsp;<img
+                        src="assets/images/header/arrowDown.png" alt="img" /></a>
             </div>
             <div class="header__menu-item"><a href="#inspirations">Inspirations&nbsp;<img
                         src="assets/images/header/arrowDown.png" alt="img" /></a></div>
             <input type="search" placeholder="Search for minimalist chair" size="30" />
             <div class="favorites">
-                <img src="assets/images/header/favorites.png" alt="heart" />
+                <img src="assets/images/header/favorites.png" alt="heart" class="favoritesButton"/>
             </div>
             <div class="cart">
-                <img src="assets/images/header/cart.png" alt="basket" />
+                <img src="assets/images/header/cart.png" alt="basket" class="busket" />
             </div>
             <div class="user">
                 <div class="dropdown">
@@ -36,7 +36,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="assets/images/header/user.png" alt="user" id="user" />
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                         <div class="dropdown-item userProfile">Профиль:</div>
                         <div class="dropdown-item"><img src="assets/images/header/user.png" alt="user" /></div>
                         <div class="dropdown-item userName">Таня Иванова</div>
@@ -48,20 +48,20 @@
                 </div>
             </div>
         </nav>
-        <div class="left">
-        <div class="groupButtons">
-            <div class="radiobuttons">
-                <a class="switch" href="#" role="button"></a>
-                <a class="switch switch-active" href="#" role="button"></a>
-                <a class="switch" href="#" role="button"></a>
-                <a class="switch" href="#" role="button"></a>
-            </div>
-            <div class="carouselButtons">
-                <div class="buttonPrev"><img src="assets/images/header/btnPrev.png" /></div>
-                <div class="buttonNext"><img src="assets/images/header/btnNext.png" /></div>
+        <div class="leftSideBtn">
+            <div class="groupButtons">
+                <div class="radiobuttons">
+                    <a class="switch" href="#" role="button"></a>
+                    <a class="switch switch-active" href="#" role="button"></a>
+                    <a class="switch" href="#" role="button"></a>
+                    <a class="switch" href="#" role="button"></a>
+                </div>
+                <div class="carouselButtons">
+                    <div class="buttonPrev"><img src="assets/images/header/btnPrev.png" alt="img" /></div>
+                    <div class="buttonNext"><img src="assets/images/header/btnNext.png" alt="img" /></div>
+                </div>
             </div>
         </div>
-    </div>
         <div class="header-small">
             <nav class="header-small__menu">
                 <div class="header-small__row-top">
@@ -79,10 +79,10 @@
                         <input type="search" placeholder="Search for minimalist chair" size="20" />
                     </div>
                     <div class="favorites">
-                        <img src="assets/images/header/favorites.png" alt="heart" />
+                        <img src="assets/images/header/favorites.png" alt="heart" class="favoritesButton"/>
                     </div>
                     <div class="cart">
-                        <img src="assets/images/header/cart.png" alt="basket" />
+                        <img src="assets/images/header/cart.png" alt="basket" class="busket" />
                     </div>
                     <div class="user">
                         <img src="assets/images/header/user.png" alt="user" class="user" />
@@ -99,10 +99,10 @@
                     </div>
                     <div class="text-muted">
                         <div class="favorites">
-                            <img src="assets/images/header/favorites.png" alt="heart" />
+                            <img src="assets/images/header/favorites.png" alt="heart" class="favoritesButton"/>
                         </div>
                         <div class="cart">
-                            <img src="assets/images/header/cart.png" alt="basket" />
+                            <img src="assets/images/header/cart.png" alt="basket" class="busket" />
                         </div>
                         <div class="user">
                             <img src="assets/images/header/user.png" alt="user" />
@@ -181,7 +181,7 @@
             </div>
         </div>
     </header>
-    
+
     <main class="container">
         <div class="header__benefits">
             <div class="item">
@@ -231,7 +231,8 @@
                     </div>
                     <img class="label_img" src="assets/images/our_products/Label_30_percent.png" alt="label">
                     <div class="tooltip overlay_all_btn">
-                        <button class="bdt_add_product">Add to cart</button>
+                        <button class="bdt_add_product" id="bdtAddProduct" value="Product_Syltherine">Add to
+                            cart</button>
                         <div class="overlay_btn_shake_like">
                             <p><input class="btn_share" type="image" src="assets/images/our_products/Share.png"
                                     alt="Share" value="Product_Syltherine" /> Share</p>
@@ -251,7 +252,7 @@
                         </div>
                     </div>
                     <div class="tooltip overlay_all_btn">
-                        <button class="bdt_add_product">Add to cart</button>
+                        <button class="bdt_add_product" id="bdtAddProduct" value="Product_Leviosa">Add to cart</button>
                         <div class="overlay_btn_shake_like">
                             <p><input class="btn_share" type="image" src="assets/images/our_products/Share.png"
                                     alt="Share" value="Product_Leviosa"> Share</p>
@@ -272,7 +273,7 @@
                     </div>
                     <img class="label_img" src="assets/images/our_products/Label_50_percent.png" alt="label">
                     <div class="tooltip overlay_all_btn">
-                        <button class="bdt_add_product">Add to cart</button>
+                        <button class="bdt_add_product" id="bdtAddProduct" value="Product_Lolito">Add to cart</button>
                         <div class="overlay_btn_shake_like">
                             <p><input class="btn_share" type="image" src="assets/images/our_products/Share.png"
                                     alt="Share" value="Product_Lolito" /> Share</p>
@@ -293,7 +294,7 @@
                     </div>
                     <img class="label_img" src="assets/images/our_products/Label_new.png" alt="label">
                     <div class="tooltip overlay_all_btn">
-                        <button class="bdt_add_product">Add to cart</button>
+                        <button class="bdt_add_product" id="bdtAddProduct" value="Product_Respira">Add to cart</button>
                         <div class="overlay_btn_shake_like">
                             <p><input class="btn_share" type="image" src="assets/images/our_products/Share.png"
                                     alt="Share" value="Product_Respira" /> Share</p>
@@ -313,7 +314,7 @@
                         </div>
                     </div>
                     <div class="tooltip overlay_all_btn">
-                        <button class="bdt_add_product">Add to cart</button>
+                        <button class="bdt_add_product" id="bdtAddProduct" value="Product_Grifo">Add to cart</button>
                         <div class="overlay_btn_shake_like">
                             <p><input class="btn_share" type="image" src="assets/images/our_products/Share.png"
                                     alt="Share" value="Product_Grifo" /> Share</p>
@@ -334,7 +335,7 @@
                     </div>
                     <img class="label_img" src="assets/images/our_products/Label_new.png" alt="label">
                     <div class="tooltip overlay_all_btn">
-                        <button class="bdt_add_product">Add to cart</button>
+                        <button class="bdt_add_product" id="bdtAddProduct" value="Product_Muggo">Add to cart</button>
                         <div class="overlay_btn_shake_like">
                             <p><input class="btn_share" type="image" src="assets/images/our_products/Share.png"
                                     alt="Share" value="Product_Muggo" /> Share</p>
@@ -355,7 +356,7 @@
                     </div>
                     <img class="label_img" src="assets/images/our_products/Label_50_percent.png" alt="label">
                     <div class="tooltip overlay_all_btn">
-                        <button class="bdt_add_product">Add to cart</button>
+                        <button class="bdt_add_product" id="bdtAddProduct" value="Product_Pingky">Add to cart</button>
                         <div class="overlay_btn_shake_like">
                             <p><input class="btn_share" type="image" src="assets/images/our_products/Share.png"
                                     alt="Share" value="Product_Pingky" /> Share</p>
@@ -376,7 +377,7 @@
                     </div>
                     <img class="label_img" src="assets/images/our_products/Label_new.png" alt="label">
                     <div class="tooltip overlay_all_btn">
-                        <button class="bdt_add_product">Add to cart</button>
+                        <button class="bdt_add_product" id="bdtAddProduct" value="Product_Potty">Add to cart</button>
                         <div class="overlay_btn_shake_like">
                             <p><input class="btn_share" type="image" src="assets/images/our_products/Share.png"
                                     alt="Share" value="Product_Potty" /> Share</p>
@@ -488,17 +489,17 @@
     <section class="container_funiro">
         <div id="total_container_funiro">
             <!--Блоки с абсолютным позиционированием -->
-            <div id="img_container_funiro1"><img id="img_funiro" src="assets/images/funiro/Rectangle36.png"> </div>
-            <div id="img_container_funiro2"> <img id="img_funiro" src="assets/images/funiro/Rectangle37.png"></div>
-            <div id="img_container_funiro3"> <img id="img_funiro" src="assets/images/funiro/Rectangle38.png"></div>
-            <div id="img_container_funiro4"><img id="img_funiro" src="assets/images/funiro/Rectangle39.png"></div>
+            <div id="img_container_funiro1"><img class="img_funiro" src="assets/images/funiro/Rectangle36.png" alt="funirofurniture1"> </div>
+            <div id="img_container_funiro2"> <img class="img_funiro" src="assets/images/funiro/Rectangle37.png" alt="funirofurniture2"></div>
+            <div id="img_container_funiro3"> <img class="img_funiro" src="assets/images/funiro/Rectangle38.png" alt="funirofurniture3"></div>
+            <div id="img_container_funiro4"><img class="img_funiro" src="assets/images/funiro/Rectangle39.png" alt="funirofurniture4"></div>
             <div id="text_container_funiro1"> Share you set up with </div>
             <div id="text_container_funiro2"> #FuniroFurniture </div>
-            <div id="img_container_funiro5"><img id="img_funiro" src="assets/images/funiro/Rectangle40.png"></div>
-            <div id="img_container_funiro6"><img id="img_funiro" src="assets/images/funiro/Rectangle43.png"></div>
-            <div id="img_container_funiro7"><img id="img_funiro" src="assets/images/funiro/Rectangle41.png"></div>
-            <div id="img_container_funiro8"> <img id="img_funiro" src="assets/images/funiro/Rectangle45.png"></div>
-            <div id="img_container_funiro9"> <img id="img_funiro" src="assets/images/funiro/Rectangle44.png"></div>
+            <div id="img_container_funiro5"><img class="img_funiro" src="assets/images/funiro/Rectangle40.png" alt="funirofurniture5"></div>
+            <div id="img_container_funiro6"><img class="img_funiro" src="assets/images/funiro/Rectangle43.png" alt="funirofurniture6"></div>
+            <div id="img_container_funiro7"><img class="img_funiro" src="assets/images/funiro/Rectangle41.png" alt="funirofurniture7"></div>
+            <div id="img_container_funiro8"> <img class="img_funiro" src="assets/images/funiro/Rectangle45.png" alt="funirofurniture8"></div>
+            <div id="img_container_funiro9"> <img class="img_funiro" src="assets/images/funiro/Rectangle44.png" alt="funirofurniture9"></div>
         </div>
 
         <div class="bdt_page_up"><a class="link_page_up" href="#main">Page up</a></div>
@@ -562,6 +563,6 @@
     <script src="scripts/our_products.js"></script>
     <script src="scripts/inspiration.js"></script>
     <script src="scripts/tips.js"></script>
-    
 </body>
+
 </html>

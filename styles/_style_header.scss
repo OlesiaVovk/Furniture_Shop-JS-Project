@@ -1,7 +1,3 @@
-@import "style_variables";
-@import "style_breakpoints";
-
-
 .header {
     position: relative;
     margin: 0 auto 50px;
@@ -9,7 +5,7 @@
     width: 100%;
     background-color: $color-inspiration-background;
 
-    .left {
+    .leftSideBtn {
         display: flex;
         justify-content: flex-end;
 
@@ -67,9 +63,9 @@
 
     .header__menu {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        padding: 50px 0;
+        padding: 50px;
 
         a {
             cursor: pointer;
@@ -89,7 +85,7 @@
         }
 
         input {
-            background: url("/assets/images/header/search.png") no-repeat left;
+            background: url("../assets/images/header/search.png") no-repeat left;
             background-position-x: 2mm;
             padding: 5px 40px;
             color: $color-text2;
@@ -140,7 +136,7 @@
             }
 
             input {
-                background: url("/assets/images/header/search.png") no-repeat left;
+                background: url("../assets/images/header/search.png") no-repeat left;
                 background-position-x: 2mm;
                 padding: 5px 40px;
                 color: $color-text2;
@@ -172,7 +168,7 @@
             color: $color-text3;
 
             &::after {
-                content: url(/assets/images/header/person.svg);
+                content: url(../assets/images/header/person.svg);
                 margin-left: 5px;
             }
         }
@@ -181,7 +177,7 @@
             color: $color-text3;
 
             &::after {
-                content: url(/assets/images/header/mail.svg);
+                content: url(../assets/images/header/mail.svg);
                 margin-left: 5px;
             }
         }
@@ -190,7 +186,7 @@
             color: $color-text3;
 
             &::after {
-                content: url(/assets/images/header/bell.svg);
+                content: url(../assets/images/header/bell.svg);
             }
         }
 
@@ -198,7 +194,7 @@
             color: $color-text3;
 
             &::after {
-                content: url(/assets/images/header/gear.svg);
+                content: url(../assets/images/header/gear.svg);
                 margin-left: 5px;
             }
         }
@@ -248,14 +244,14 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.72);
-    margin: 10px auto;
-    padding: 20px;
+    margin: 30px;
 
     .display-4 {
         font-weight: 700;
         font-size: 25px;
         color: $color-titles;
         text-align: center;
+        margin-bottom: 20px;
     }
 
     .lead {
@@ -263,6 +259,7 @@
         font-weight: 500;
         color: $color-text3;
         text-align: center;
+        margin-bottom: 30px;
     }
 
     .header__button {
@@ -290,7 +287,7 @@
 
 .text-white {
     input {
-        background: url("/assets/images/header/search.png") no-repeat left;
+        background: url("../assets/images/header/search.png") no-repeat left;
         background-position-x: 2mm;
         padding: 0 40px;
         border: none;
@@ -381,13 +378,19 @@
 
         .header__menu,
         .header-small,
-        .jumbotron {
+        .jumbotron,
+        .leftSideBtn {
             display: none;
         }
     }
 
     #carouselExampleIndicators {
-        margin-top: 0;
+        margin-top: 30px;
+
+        .carousel-item {
+            margin: 0;
+            padding: 0;
+        }
 
         .caption {
             display: none;
@@ -415,13 +418,19 @@
 
         .header__menu,
         .header-small,
-        .jumbotron {
+        .jumbotron,
+        .leftSideBtn {
             display: none;
         }
     }
 
     #carouselExampleIndicators {
-        margin-top: 0;
+        margin-top: 30px;
+
+        .carousel-item {
+            margin: 0;
+            padding: 0;
+        }
 
         .caption {
             position: absolute;
@@ -471,14 +480,18 @@
         .pos-f-t,
         .header__menu,
         .jumbotron,
-        .radiobuttons,
-        .carouselButtons {
+        .leftSideBtn {
             display: none;
         }
     }
 
     #carouselExampleIndicators {
         margin-top: 30px;
+
+        .carousel-item {
+            margin: 0;
+            padding: 0;
+        }
 
         .caption {
             position: absolute;
@@ -526,19 +539,18 @@
         .header__menu,
         .pos-f-t,
         #header__jumbotron-small,
-        .radiobuttons,
-        .carouselButtons {
+        .leftSideBtn {
             display: none;
         }
 
         .jumbotron {
-            width: 300px;
-            height: 400px;
-            left: 50px;
+            width: 394px;
+            height: 453px;
+            left: 30px;
             top: 140px;
 
             .display-4 {
-                font-size: 36px;
+                font-size: 46px;
             }
 
             .lead {
@@ -546,38 +558,41 @@
             }
 
             .header__button {
-                width: 174px;
+                width: 274px;
             }
         }
     }
 
     #carouselExampleIndicators {
+        margin-top: 30px;
+
+        .carousel-item {
+            margin: 0;
+            padding: 0;
+        }
 
         .carousel-inner {
             .caption {
-                width: 204px;
-                height: 98px;
-                right: 170px;
-                bottom: 20px;
-                padding: 10px;
+                right: 40px;
+                bottom: 40px;
+            }
 
-                h3 {
-                    font-size: 20px;
+            h3 {
+                font-size: 20px;
+            }
+
+            h4 {
+                font-size: 20px;
+                color: $color-titles;
+
+                &::after {
+                    content: " →";
                 }
+            }
 
-                h4 {
-                    font-size: 20px;
-                    color: $color-titles;
-
-                    &::after {
-                        content: " →";
-                    }
-                }
-
-                p {
-                    font-size: 13px;
-                    color: $color-text2;
-                }
+            p {
+                font-size: 13px;
+                color: $color-text2;
             }
         }
     }
@@ -589,7 +604,9 @@
     .header {
 
         .header__menu {
-            font-size: smaller;
+            display: flex;
+            align-items: center;
+            padding: 50px 20px;
         }
 
         .pos-f-t,
@@ -601,6 +618,8 @@
         .jumbotron {
             width: 394px;
             height: 453px;
+            left: 30px;
+            top: 140px;
 
             .display-4 {
                 font-size: 46px;
