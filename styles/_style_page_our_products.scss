@@ -40,7 +40,10 @@
     top: 175px;
     background-color: $color-white;
     border: 1px solid $color-primary;
-    // margin-top: 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link_page_up {

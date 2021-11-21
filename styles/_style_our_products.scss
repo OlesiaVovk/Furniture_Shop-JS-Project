@@ -175,7 +175,9 @@
     background-color: $color-white;
     border: 1px solid $color-primary;
     margin-top: 5%;
-    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link_show_more {

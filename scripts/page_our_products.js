@@ -258,7 +258,7 @@ function createProduct(massProduct){//ф-ия по созданию элемен
 
         let bdt = document.createElement('button');
         bdt.className = "bdt_add_product";
-        bdt.id = "bdtAddProduct";
+        // bdt.id = "bdtAddProduct";
         bdt.textContent = "Add to cart";
         divShadow.appendChild(bdt);
 
