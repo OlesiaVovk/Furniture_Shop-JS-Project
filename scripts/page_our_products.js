@@ -168,10 +168,20 @@ let massProductJSON = [{
     "product_update":"assets/images/our_products/Label_new.png"
 }];
 
+const btnShare = document.querySelectorAll("input.btn_share");
 const btnLike = document.querySelectorAll("input.btn_like");
 let arrayLikes = []; //массив лайков
+let cartArray = []; //массив товаров в корзине
+let cartPriceArray = []; //массив цен для корзины
 
-const btnShare = document.querySelectorAll("input.btn_share");
+function shareViaWhatsapp(productName) {
+    window.open(
+        "https://web.whatsapp.com://send?text=" + productName,
+        // This is what makes it 
+        // open in a new window.
+        '_blank'
+    );
+}
 
 document.addEventListener("DOMContentLoaded", function (event) {
     let massProduct = JSON.parse(JSON.stringify(massProductJSON));
@@ -182,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         arrayLikes = JSON.parse(localStorage.getItem('like')); //формируем массив arrayLikes из данных(лайков), которые лежат в localStorage
         for(let i = 0; i < arrayLikes.length; i++){
             for(let j = 0; j < document.getElementsByClassName('btn_like').length; j++){
-                if(document.getElementsByClassName('btn_like')[j].value == arrayLikes[i]){ //если совпадение нашей коллекции и arrayLikes найдены
+                if(document.getElementsByClassName('btn_like')[j].getAttribute("data-name") == arrayLikes[i]){ //если совпадение нашей коллекции и arrayLikes найдены
                     document.getElementsByClassName('btn_like')[j].classList.toggle("btn_like_red"); //меняем цвет                  
                 }
             }        
@@ -258,7 +268,8 @@ function createProduct(massProduct){//ф-ия по созданию элемен
 
         let bdt = document.createElement('button');
         bdt.className = "bdt_add_product";
-        // bdt.id = "bdtAddProduct";
+        bdt.value = massProduct[i].name;
+        bdt.setAttribute("data-price", ((massProduct[i].price != undefined) ? massProduct[i].price : massProduct[i].priceSale));
         bdt.textContent = "Add to cart";
         divShadow.appendChild(bdt);
 
@@ -291,7 +302,8 @@ function createProduct(massProduct){//ф-ия по созданию элемен
         input2.type = "image";
         input2.src = "assets/images/our_products/Like.png";
         input2.alt = "Like";
-        input2.value = massProduct[i].name;
+        // input2.value = massProduct[i].name;
+        input2.setAttribute("data-name", massProduct[i].name);
         line7.appendChild(input2);
 
         //слушатель для кнопки Лайк "❤", при её нажатии вызывает ф-ию buttonLikeGet
@@ -301,20 +313,32 @@ function createProduct(massProduct){//ф-ия по созданию элемен
 
 function bdtShareProduct(event){//срабатывает при нажатии на кнопку Share
     window.navigator.clipboard.writeText(event.target.closest(".btn_share").value);
-    Swal.fire(//данная функция формирует модальное окно с данными
+    let productName = `${event.target.closest(".btn_share").value}`;
+    Swal.fire(
         "Скопировано, в буфер!", 
-        `Название товара ${event.target.closest(".btn_share").value}`
+        `Название товара ${productName}`
     );
+    shareViaWhatsapp(productName);
 }
 
 function buttonLikeProduct(event){//срабатывает при нажатии на кнопку Like
-    event.target.closest(".btn_like").classList.toggle("btn_like_red");
-    arrayLikes.push(event.target.value);
+    let button = event.target.closest(".btn_like");
+    if (button.classList.contains("btn_like_red")) {
+        button.classList.remove("btn_like_red");
+        arrayLikes.pop(event.target.getAttribute("data-name"));
+    } else {
+        button.classList.add("btn_like_red");
+        arrayLikes.push(event.target.getAttribute("data-name"));
+    }
     localStorage.setItem('like', JSON.stringify(arrayLikes));
 }
 
 function addToCart(event){//срабатывает при нажатии на кнопку Add to card
+    cartArray.push(event.target.value);
+    cartPriceArray.push(event.target.getAttribute("data-price"));
     Swal.fire(
-        "Товар добавлен в корзину!"
+        `Товар добавлен в корзину! ${event.target.value}`
     );
+    localStorage.setItem('cart', JSON.stringify(cartArray));
+    localStorage.setItem('price', JSON.stringify(cartPriceArray));
 }
