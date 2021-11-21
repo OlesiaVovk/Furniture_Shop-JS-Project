@@ -11,6 +11,16 @@
 .header_our_products {
     padding: 30px;
     background-color: $color-pale-orange;
+    display: flex;
+    justify-content: space-between;
+    // border: 2px solid green;
+}
+
+.header_favorites_basket {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    // border: 2px solid green;
 }
 
 .header_link {
